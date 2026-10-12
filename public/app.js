@@ -74,7 +74,7 @@ function renderVideos() {
     listElement.append(row);
   }
 }
-
+ 
 async function loadVideos() {
   videos = await api('/api/videos');
   renderVideos();

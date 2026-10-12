@@ -14,7 +14,7 @@ export function resolvePollIntervalSeconds(value = process.env.POLL_INTERVAL_SEC
   return Math.max(30, Number(value) || 30);
 }
 const pollIntervalMs = resolvePollIntervalSeconds() * 1000;
-
+ 
 app.use(express.json({ limit: '32kb' }));
 app.use(express.static(path.join(root, 'public')));
 
